@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <!--divinectorweb.com-->
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <title> Shopping Cart design</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="fullcart.css" rel="stylesheet">
+	<link href="{%static 'css/fullcart.css'" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
@@ -13,7 +14,7 @@
 		<div class="project">
 			<div class="shop">
 				<div class="box">
-					<img src="imges/cart4.png">
+					<img src="{%static 'img/cart4.png'%}">
 					<div class="content">
 						<h3>Vatika | Bath Cream Moisturizing & Soft</h3>
 						<h4>Price: 40 EGP</h4>
@@ -22,7 +23,7 @@
 					</div>
 				</div>
 				<div class="box">
-					<img src="imges/cart2.png">
+					<img src="{% static 'img/cart2.png'%}">
 					<div class="content">
 						<h3>Vatika | Bath Cream Moisturizing & Soft</h3>
 						<h4>Price: 40 EGP</h4>
@@ -31,7 +32,7 @@
 					</div>
 				</div>
 				<div class="box">
-					<img src="imges/cart3.png">
+					<img src="{% static 'img/cart3.png'%}">
 					<div class="content">
 						<h3>Vatika | Bath Cream Moisturizing & Soft</h3>
 						<h4>Price: 250 EGP</h4>

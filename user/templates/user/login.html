@@ -1,24 +1,25 @@
+{%load static %}
 <html>
     <head>
-   <link rel="stylesheet" href="login.css">
+   <link rel="stylesheet" href="{% static 'css/login.css'%}">
    <title>Login </title>
     </head>
-    <body>
+    <body  style="background-image :url('{% static '/img/back.jpeg'%}');">
         <nav class="nav">
-            <div class="nav-logo">
+            <div class="nav-logo"> 
                 <p>Capsule</p>
             </div>
             <div class="nav-menu" id="navMenu">
                 <ul>
-                    <li><a  class="link">Home</a></li>
-                    <li><a  class="link ">About</a></li>
-                    <li><a  class="link">Services</a></li>
-                    <li><a  class="link">Contact Us</a></li>
+                    <li><a  class="link" href="{% url 'home' %}">Home</a></li>
+                    <li><a  class="link"  href="{% url 'about' %}">About</a></li>
+                    <li><a  class="link"  href="{% url 'services' %}">Services</a></li>
+                    <li><a  class="link "  href="{% url 'contactus' %}">Contact Us</a></li>
                 </ul>
             </div>
             <div class="nav-button">
-                <button class="btn white-btn" id="loginBtn" onclick="login()">LOG IN</button>
-                <button class="btn" id="registerBtn" onclick="register()">SIGN UP</button>
+                <button class="btn white-btn" id="loginBtn" onclick="location.href='{% url 'login' %}'">LOG IN</button>
+                <button class="btn" id="registerBtn" onclick="location.href='{% url 'index' %}'">SIGN UP</button>
             </div>
             <div class="nav-menu-btn">
                 <i class="bx bx-menu" onclick="myMenuFunction()"></i>

@@ -1,13 +1,14 @@
+{%load static%}
 <html>
     <head>
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="{% static 'css/home.css'%}">
     </head>
     <body>
-        <div class="home-p">
-            <div class="all">
+        <div class="home-p "style="background-image :url('{% static '/img/background.avif'%}');">
+            <div class="all"> 
                 <div class="capsule">
                     <div class="capsule_img">
-                        <img src="img/capsule.png" alt="">
+                        <img src="{% static 'img/capsule.png' %}" alt="">
                     </div>
                     <div class="capsule_text">
                         <h1>Capsule</h1>
@@ -16,11 +17,11 @@
                 </div>
                 <div class="nav-menu">
                     <ul>
-                        <li ><a class="link">Home</a></li>
-                        <li ><a class="link">About</a></li>
-                        <li ><a class="link">Services</a></li>
-                        <li ><a class="link">Contact Us</a></li>
-                        <li><a class="link">Login</a></li>
+                        <li ><a class="link" href="{% url 'home' %} ">Home</a></li>
+                        <li ><a class="link" href="{% url 'about' %}">About</a></li>
+                        <li ><a class="link" href="{% url 'services' %}">Services</a></li>
+                        <li ><a class="link"  href="{% url 'contactus' %}">Contact Us</a></li>
+                        <li><a class="link"  href="{% url 'login' %}">Login</a></li>
                     </ul>
 
                 </div>
@@ -42,24 +43,24 @@
             <h3 class="special">Categories</h3>
             <div class="cart">
                 
-                <img src="img/medication.jpg" alt="">
-                <p>Medications</p>
+                <img src=" {%static 'img/medication.jpg'%}" alt="">
+                <a href="{% url 'medication' %} "><p>Medications</p></a>
             </div>
             <div class="cart">
-                <img src="img/skin.jpg" alt="">
-                <p>Skin Care</p> 
+                <img src=" {%static 'img/skin.jpg'%}" alt="">
+                <a href="{% url 'skincare' %} "><p>Skin Care</p></a>
+            </div>
+            <div class="cart" >
+              <img src=" {%static 'img/hair.jpg'%}" alt="">
+              <a href="{% url 'haircare' %} "><p>Hair Care</p></a>
             </div>
             <div class="cart">
-                <img src="img/hair.jpg" alt="">
-                <p>Hair Care</p>
+                <img src=" {%static 'img/mom.jpg'%}" alt="">
+                <a href="{% url 'babymom' %} "><p>Baby & Mom </p></a>
             </div>
             <div class="cart">
-                <img src="img/mom.jpg" alt="">
-                <p>Baby & Mom </p>
-            </div>
-            <div class="cart">
-                <img src="img/Frame-2457-4_1667482979.webp" alt="">
-                <p>Makeup & Accessories </p>
+                <img src=" {%static 'img/Frame-2457-4_1667482979.webp'%}" alt="">
+                <a href="{% url 'makeup' %} "><p>Makeup & Accessories</p></a>
             </div>
 
         </div>
@@ -71,10 +72,10 @@
 
 
         <div class="r1">
-            <h3 class="special">Best Selling</h3>
+            <h3 class="special">Trending</h3>
             <div class="c1">
                 
-                <img src="img/hero.webp" alt="" class="centre ">
+                <img src=" {%static 'img/hero.webp'%}" alt="" class="centre ">
                 <p>Hero Baby | Nutrasense 2</p>
                 <h3>349 EGP</h3>
                 <button>Add to card</button>
@@ -82,14 +83,14 @@
             </div>
             <div class="c1">
                 
-                <img src="img/oil.webp" alt="" class="centre ">
+                <img src=" {%static 'img/oil.webp'%}" alt="" class="centre ">
                 <p>Johnson's Baby Oil </p>
                 <h3>90 EGP</h3>
                 <button>Add to card</button>
             </div>
             <div class="c1">
                
-                <img src="img/molfix.webp" alt="" class="centre ">
+                <img src=" {%static 'img/molfix.webp'%}" alt="" class="centre ">
                 <p>Molfix | Junior Baby Diaper   </p>
                 <h3>385 EGP</h3>
                 <button>Add to card</button>
@@ -99,19 +100,19 @@
         <div class="offers">
             <h3 class="special">Offers</h3>
             <div class="f1">
-             <img src="img/lashes.webp" alt="">
+             <img src=" {%static 'img/lashes.webp'%}" alt="">
              <p>For Women</p>
              <h3>25% OFF</h3>
              <button> order now</button>
             </div>
             <div class="f1">
-                <img src="img/pants.webp" alt="">
+                <img src=" {%static 'img/pants.webp'%}" alt="">
                 <p>For Babies</p>
                 <h3>25% OFF</h3>
                 <button>order now</button>
             </div>
             <div class="f1">
-                <img src="img/h-baby.webp" alt="">
+                <img src=" {%static 'img/h-baby.webp'%}" alt="">
                 <p>For Babies </p>
                 <h3>300 EGP</h3>
                 <button>order now</button>
@@ -131,25 +132,25 @@
             <p>Molfix</p>
         </div>
        </div>
-      <div class="footer ">
+      <div class="footer "style ="background-image :url('{% static '/img/contact.jpg'%}');">
         <div class="contacts_apps">
             <div class="face_book">
                 <div class="facephoto">
-                     <img src="img/facebook (2).png">
+                     <img src=" {%static 'img/facebook (2).png'%}">
                 </div>
                 <div class="face_book_text"> <h4>Capsule@yahoo.com</h4></div>
                
             </div>
             <div class="insta">
                 <div class="facephoto">
-                     <img src="img/instagram (1).png">
+                     <img src=" {%static 'img/insta.png'%}">
                 </div>
                 <div class="insta_text"> <h4>Capsule@insta.com</h4></div>
-               
+                    
             </div>
-            <div class="phone">
+            <div class="phone">'
                 <div class="facephoto">
-                     <img src="img/phone.jpg">
+                     <img src=" {%static 'img/phone.jpg'%}">
                 </div>
                 <div class="phone_text"> <h4>01025477781</h4></div>
                

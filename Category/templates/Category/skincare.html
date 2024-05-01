@@ -1,19 +1,20 @@
+{% load static %}
 <html>
     <head>
-        <link rel="stylesheet" href="medicine.css">
+        <link rel="stylesheet" href="{% static 'css/medicine.css'%}">
     </head>
     <body>
         <div class="all">
             <div class="capsule">
              <div class="capsule_img" >
-            <img src="img/capsule.jpg" alt="">
+            <img src="{% static 'img/capsule.jpg'%}" alt="">
              </div>
              <div class="capsule_text">
              <h1>Capsule</h1>
              </div>
             </div>
             <div class="login">
-            <a href="">Login</a>
+            <a href="{% url 'login' %}">Login</a>
             </div>
         </div>
         <div class="Navbar">
@@ -31,10 +32,10 @@
                 <div class="wish">
                  
                  <div class="wish-txt">
-                    <p>wishlist</p> 
+                    <a href="{% url 'wish' %}"><p>wishlist</p></a> 
                  </div>
                     <div class="wish-img">
-                        <img src="img/heart.jpg" alt="">
+                        <img src="{% static 'img/heart.jpg'%}" alt="">
                         </div>
                  
                  
@@ -42,11 +43,12 @@
                 <span> |</span>
                 <div class="wish">
                     <div class="wish-txt">
-                        <p>cart</p>
+                        <a href="{% url 'emptycart' %}"><p>cart</p></a> 
+
                        </div>
    
                     <div class="cart-img">
-                        <img src="img/cart.jpeg" alt="">
+                        <img src="{% static 'img/cart.jpeg'%}" alt="">
                     </div>
                     
                 </div>
@@ -58,7 +60,7 @@
 
         <div class="container">
             <div class="c_logo">
-             <img src="img/skin.webp" alt="">
+             <img src="{% static 'img/skin.webp'%}" alt="">
             </div>
             <div class="c_text">
              <h2>Skin Care</h2>
@@ -71,8 +73,8 @@
 
     <div class="r1">
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/nivea-anti-perspirant-protect-and-care-deodorant-stick-40-ml-01655297494.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/nivea-anti-perspirant-protect-and-care-deodorant-stick-40-ml-01655297494.webp'%}" alt="" class="centre ">
             <p>Nivea | Protect & Care, Antiperspirant for Women</p>
             <h3>150 EGP</h3>
             
@@ -80,15 +82,15 @@
    
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/nivea-soft-moisturizing-cream-refreshingly-soft-50ml-01655029300.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/nivea-soft-moisturizing-cream-refreshingly-soft-50ml-01655029300.webp'%}" alt="" class="centre ">
             <p>Nivea | Soft Refreshing & Moisturizing Cream</p>
             <h3>41.99 EGP</h3>
             <button>Add to card</button>
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/bepanthin.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/bepanthin.webp'%}" alt="" class="centre ">
             <p>Bepanthen | Lotion | 200ml </p>
             <h3>269 EGP</h3>
             <button>Add to card</button>
@@ -100,23 +102,23 @@
 
     <div class="r1">
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/starville-micellar-water-200ml-u8ct-01703077273.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/starville-micellar-water-200ml-u8ct-01703077273.webp'%}" alt="" class="centre ">
             <p>Starville | Micellar Water | 200ml</p>
             <h3>100 EGP</h3>
             <button>Add to card</button>
             
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/beesline-whitening-roll-on-hair-delaying-beauty-pearl-multicolour-50ml-tjkm-01695229359.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/beesline-whitening-roll-on-hair-delaying-beauty-pearl-multicolour-50ml-tjkm-01695229359.webp'%}" alt="" class="centre ">
             <p>Beesline | Whitening Roll On </p>
             <h3>499 EGP</h3>
             <button>Add to card</button>
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/neutrogenaskindetoxclarifyingclaywashmask-01662992521.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/neutrogenaskindetoxclarifyingclaywashmask-01662992521.webp'%}" alt="" class="centre ">
             <p>Neutrogena | Skin Detox Clarifying Clay  </p>
             <h3>120 EGP</h3>
             <button>Add to card</button>
@@ -128,23 +130,23 @@
 
      <div class="r1">
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/eva.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/eva.webp'%}" alt="" class="centre ">
            <p> Eva Skin Care | Evasiline Body Lotion</p>
             <h3>100 EGP</h3>
             <button>Add to card</button>
             
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/ultra.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/ultra.webp'%}" alt="" class="centre ">
             <p>Beesline | Ultra Screen Cream Active</p>
             <h3>360 EGP </h3>
             <button>Add to card</button>
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/isis.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/isis.webp'%}" alt="" class="centre ">
             <p>Isis | Uveblock SPF 50+ Dry Touch Clair </p>
             <h3>559 EGP</h3>
             <button>Add to card</button>
@@ -155,23 +157,23 @@
     <!-- الصف الرابع   -->
     <div class="r1">
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/babia.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/babia.webp'%}" alt="" class="centre ">
             <p>Bobai | Tinted Sunscreen SPF 80 Cream</p>
             <h3>125 EGP</h3>
             <button>Add to card</button>
             
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/starville.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/starville.webp'%}" alt="" class="centre ">
             <p>Starville | Whitening Roll On Orient Pearl</p>
             <h3>130 EGP</h3>
             <button>Add to card</button>
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/bobana.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/bobana.webp'%}" alt="" class="centre ">
             <p>Bobana | Charcoal Peel Off Face Mask  </p>
             <h3>60 EGP</h3>
             <button>Add to card</button>
@@ -183,8 +185,8 @@
 
     <div class="r1">
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/soap.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/soap.webp'%}" alt="" class="centre ">
             <p>Lit Up | Facial Cleansing & Clarifying Soap</p>
             <h3>60 EGP</h3>
             
@@ -192,15 +194,15 @@
    
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/spotless.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/spotless.webp'%}" alt="" class="centre ">
             <p>Eva Spotless | Cleansing Bar | 20gm</p>
             <h3>15 EGP</h3>
             <button>Add to card</button>
         </div>
         <div class="c1">
-            <img src="img/heart.jpg" alt="" class="logo">
-            <img src="img/bobana-sheet-mask-pomegranate-hyaluronic-acid-x3km-01695242984.webp" alt="" class="centre ">
+            <img src="{% static 'img/heart.jpg'%}" alt="" class="logo">
+            <img src="{% static 'img/bobana-sheet-mask-pomegranate-hyaluronic-acid-x3km-01695242984.webp'%}" alt="" class="centre ">
             <p>BoBana | Sheet Mask Pomegranate </p>
             <h3>28.5 EGP</h3>
             <button>Add to card</button>

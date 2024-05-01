@@ -1,12 +1,13 @@
+{%load static%}
 <html>
     <head>
  
-        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="{% static 'css/about.css'%}">
         
         <title>About</title>
 
     </head>
-    <body>
+    <body style="background-image :url('{% static '/img/abbb.jpeg'%}');">
         <div class="parent">
         
         
@@ -16,15 +17,15 @@
                 </div>
                 <div class="nav-menu" id="navMenu">
                     <ul>
-                        <li><a  class="link">Home</a></li>
-                        <li><a  class="link active">About</a></li>
-                        <li><a  class="link">Services</a></li>
-                        <li><a  class="link">Contact Us</a></li>
+                        <li><a  class="link" href="{% url 'home' %} ">Home</a></li>
+                        <li><a  class="link active"  href="{% url 'about' %}"> About</a></li>
+                        <li ><a class="link" href="{% url 'services' %}">Services</a></li>
+                        <li><a  class="link" href="{% url 'login' %}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="nav-button">
-                    <button class="btn white-btn" id="loginBtn" onclick="login()">LOG IN</button>
-                    <button class="btn" id="registerBtn" onclick="register()">SIGN UP</button>
+                    <button class="btn white-btn" id="loginBtn" onclick="location.href='{% url 'login' %}'">LOG IN</button>
+                    <button class="btn" id="registerBtn" onclick="location.href='{% url 'index' %}'">SIGN UP</button>
                 </div>
                 <div class="nav-menu-btn">
                     <i class="bx bx-menu" onclick="myMenuFunction()"></i>

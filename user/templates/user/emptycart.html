@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html>
     <header>
@@ -5,13 +6,13 @@
         <title>empty cart</title>
         <meta name="viewport" content="width=device-width,
           initial-scale=1.0"/>
-        <link rel="stylesheet" href="emptycart.css" />
+        <link rel="stylesheet" href="{%static 'css/emptycart.css'%}" />
     </header>
     <body>
       <div class="all">
         <div class="capsule">
          <div class="capsule_img" >
-        <img src="imges/capsule.png" alt="">
+        <img src="{%static 'img/capsule.png'%}" alt="">
          </div>
          <div class="capsule_text">
          <h1>Capsule</h1>
@@ -26,13 +27,13 @@
     
     <div class="emptycartdesign">
       <div class="emptyphoto">
-        <img src="imges/empty_cart.jpeg">
+        <img src="{%static 'img/empty_cart.jpeg'%}">
       </div>
     </div>
     <div class="emptycartdesign2">
       <div class="emptytext">
        <button>
-        <a href="">
+        <a href="{%url 'home'%}">
           Start Shopping Now
         </a>
        </button>

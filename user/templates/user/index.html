@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,24 +6,26 @@
     <title>Responsive Registration Form</title>
     <meta name="viewport" content="width=device-width,
       initial-scale=1.0"/>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="{% static 'css/index.css'%}" />
   </head>
-  <body>
+  <body style="background-image :url('{% static '/img/Reg_back.jpg'%}');">
     <nav class="nav">
         <div class="nav-logo">
             <p>Capsule .</p>
         </div>
         <div class="nav-menu" id="navMenu">
             <ul>
-                <li><a href="#" class="link ">Home</a></li>
-                <li><a href="#" class="link">Contact Us</a></li>
-                <li><a href="#" class="link">Services</a></li>
-                <li><a href="#" class="link">About</a></li>
+                <li><a href="#" class="link "href="{% url 'home' %}">Home</a></li>
+                    <li><a  class="link"  href="{% url 'about' %}">About</a></li>
+                    <li><a href="#" class="link" href="{% url 'contactus' %}">Contact Us</a></li>
+                    <li><a  class="link"  href="{% url 'services' %}">Services</a></li>
+                    
+                
             </ul>
         </div>
         <div class="nav-button">
-            <button class="btn white-btn " id="loginBtn" onclick="login()">Log In</button>
-            <button class="btn active" id="registerBtn" onclick="register()">Sign Up</button>
+            <button class="btn white-btn " id="loginBtn"onclick="location.href='{% url 'login' %}'">LOG IN</button>
+            <button class="btn active" id="registerBtn"  onclick="location.href='{% url 'index' %}'">SIGN UP</button>
         </div>
         <div class="nav-menu-btn">
             <i class="bx bx-menu" onclick="myMenuFunction()"></i>
