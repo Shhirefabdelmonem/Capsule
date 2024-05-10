@@ -34,9 +34,9 @@
             <i class="bx bx-menu" onclick="myMenuFunction()"></i>
         </div>
     </nav>
-    <div class="content-section">
+    <div class="content-section " style="margin-top: 300px; ; " class ="form">
       <!-- <h1 class="form-title">Registration Now</h1> -->
-      <form method="POST">
+      <form  class="rform" method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Join Today</legend>
@@ -47,9 +47,9 @@
         </div>
     </form>
     <div class="border-top pt-3">
-        <small class="text-muted">
+        <h3 class="text-muted">
             Already Have An Account? <a class="ml-2" href="#">Sign In</a>
-        </small>
+        </h3>
     </div>
       </form>
     </div>

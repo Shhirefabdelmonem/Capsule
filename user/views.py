@@ -20,7 +20,7 @@ def index(request):
     return render(request, 'user/index.html', {'form': form})
 
 def emptycart(request):
-    return render(request, "emptycart.html")
+    return render(request, "user/emptycart.html")
 
 
 def fullcart(request):
